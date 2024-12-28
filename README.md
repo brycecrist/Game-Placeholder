@@ -6,7 +6,7 @@ If you do not have Typescript, Node, and NPM, you should install them.
 Try something like:
 ```
 cd web
-sudo apt install nodej
+sudo apt install nodejs
 sudo apt install npm
 sudo npm install -g typescript
 ```
