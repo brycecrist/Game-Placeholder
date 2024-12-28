@@ -26,8 +26,14 @@ enum Dimension {
 // Utils and Globals
 
 function toPx(v: string, dimension: Dimension): number {
-    // 1px = (100vw / [document.documentElement.clientWidth] px)
-    // https://stackoverflow.com/questions/28295072/how-can-i-convert-px-to-vw-in-javascript
+    /*
+    "1px = (100vw / [document.documentElement.clientWidth] px)"
+    https://stackoverflow.com/questions/28295072/how-can-i-convert-px-to-vw-in-javascript
+
+    If you instead multiply the client width by the view width and divide by 100, you get the measurement in px
+    px = ([clientWidth] * vw / 100)
+    */
+
     const html = document.querySelector("html")
     console.log(`Translating ${v} to px... dimension: ${dimension}`)
     
